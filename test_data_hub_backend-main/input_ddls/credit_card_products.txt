@@ -1,0 +1,20 @@
+CREATE TABLE credit_card_products (
+    product_code VARCHAR(24) PRIMARY KEY,
+    product_name VARCHAR(64),
+    card_type VARCHAR(24),
+    credit_limit_type VARCHAR(16),
+    card_category VARCHAR(32),
+    currency VARCHAR(8),
+    issue_channel VARCHAR(16),
+    issuing_bank VARCHAR(32),
+    valid_from DATE,
+    valid_to DATE,
+    reward_program VARCHAR(32),
+    default_credit_limit DECIMAL(10,2),
+    annual_fee DECIMAL(10,2),
+    interest_rate DECIMAL(5,2),
+    billing_cycle_days INT,
+    created_dt DATE,
+    last_updated_dt TIMESTAMP,
+    active_flag CHAR(1)
+);

@@ -1,0 +1,11 @@
+product_code,product_name,card_type,secured,segment,currency,channel,bank,start_date,end_date,reward_program,default_credit_limit,annual_fee,interest_rate,billing_cycle_days,created_date,last_updated,active_flag
+CC922,Platinum Credit Card,VISA,Unsecured,Platinum,CAD,Mobile,HDFC Bank,2021-09-29,2024-07-20,Rewards,13129.08,1791.67,3.43,45,2025-04-15,2025-03-03 03:27,N
+CC523,Classic Credit Card,VISA,Unsecured,Platinum,USD,Online,ICICI Bank,2021-09-06,2022-04-13,Rewards,137279.35,3755.39,3.24,45,2023-07-22,2025-02-08 11:21,N
+CC949,Titanium Credit Card,VISA,Unsecured,Platinum,AUD,Mobile,ABC Bank,2021-08-27,2025-05-11,None,49712.65,1490.82,3.52,30,2023-09-04,2024-08-12 06:19,N
+CC192,Infinite Card,VISA,Unsecured,Platinum,CNY,Online,Bank XYZ,2024-12-11,2028-07-25,Cashback,47304.12,4330.43,3.24,45,2024-10-22,2024-12-09 09:21,N
+CC481,Corporate Card,MASTERCARD,Secured,Titanium,AED,Mobile,ICICI Bank,2020-09-19,2099-12-31,Cashback,245487.42,3165.84,3.74,45,2022-12-05,2025-02-15 00:14,Y
+CC291,Travel Card,MASTERCARD,Secured,Silver,AUD,Branch,Bank XYZ,2023-02-17,2099-12-31,Rewards,180426.51,3551.07,3.35,45,2023-05-10,2024-12-05 20:51,N
+CC840,Travel Card,AMEX,Unsecured,Silver,JPY,Online,Bank XYZ,2020-09-03,2023-08-07,Miles,140843.85,4453.83,3.7,45,2023-03-16,2025-03-21 09:00,N
+CC135,Cashback Card,MASTERCARD,Secured,Platinum,JPY,Mobile,SBI,2020-11-30,2020-01-01,Miles,410803.84,4244.6,3.26,45,2025-02-16,2025-02-08 15:40,N
+CC911,Titanium Credit Card,MASTERCARD,Unsecured,Silver,USD,Online,Bank XYZ,2021-11-25,2022-12-12,None,357097.86,4266.56,3.55,45,2025-02-21,2025-05-02 20:35,Y
+CC547,Gold Credit Card,AMEX,Secured,Platinum,AUD,Online,Bank XYZ,2022-12-01,2023-07-23,Rewards,343268.98,3283.75,3.63,45,2024-05-26,2024-12-07 01:41,N

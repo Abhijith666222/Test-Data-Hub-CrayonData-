@@ -1,0 +1,127 @@
+Overall Validation Status: FAIL
+
+Table: credit_card_accounts
+  Status: FAIL
+  Business Rules:
+    - Unique Serial Number: PASS (Errors: 0)
+    - Valid Customer Reference: PASS (Errors: 0)
+    - Credit Limit Non-Negative: PASS (Errors: 0)
+    - Status Valid Values: PASS (Errors: 0)
+    - Date Consistency: PASS (Errors: 0)
+  Test Scenarios:
+    - Create Active Account with Valid Data: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Create Active Account with Valid Data
+      Samples: []
+    - Attempt Account Creation with Duplicate Serial Number: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Attempt Account Creation with Duplicate Serial Number
+      Samples: []
+    - Account with Negative Credit Limit: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Account with Negative Credit Limit
+      Samples: []
+    - Closed Account with Valid Dates: PASS (Matched: 1)
+    - Account with Invalid Customer Reference: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Account with Invalid Customer Reference
+      Samples: []
+    - Blocked Account with Reason: PASS (Matched: 38)
+
+Table: credit_card_products
+  Status: FAIL
+  Business Rules:
+    - Unique Product Code: PASS (Errors: 0)
+    - Active Flag Validity: PASS (Errors: 0)
+    - Date Range Validity: PASS (Errors: 0)
+    - Interest Rate Range: PASS (Errors: 0)
+  Test Scenarios:
+    - Create New Product with Valid Data: PASS (Matched: 1)
+    - Duplicate Product Code: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Duplicate Product Code
+      Samples: []
+    - Invalid Active Flag: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Invalid Active Flag
+      Samples: []
+    - End Date Before Start Date: FAIL (Matched: 0)
+      Error Message: No records matched scenario: End Date Before Start Date
+      Samples: []
+    - Interest Rate Out of Range: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Interest Rate Out of Range
+      Samples: []
+
+Table: credit_card_transactions
+  Status: FAIL
+  Business Rules:
+    - Unique Transaction Serial Number: PASS (Errors: 0)
+    - Valid Account Reference: PASS (Errors: 0)
+    - Amount Non-Negative: PASS (Errors: 0)
+    - Valid Transaction Status: PASS (Errors: 0)
+    - Date Consistency: PASS (Errors: 0)
+  Test Scenarios:
+    - Successful Purchase Transaction: PASS (Matched: 2302)
+    - Transaction with Invalid Account Reference: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Transaction with Invalid Account Reference
+      Samples: []
+    - Negative Transaction Amount: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Negative Transaction Amount
+      Samples: []
+    - Declined Transaction: PASS (Matched: 161)
+    - Transaction with Post Date Before Transaction Date: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Transaction with Post Date Before Transaction Date
+      Samples: []
+    - International Online Transaction: PASS (Matched: 206)
+
+Table: customer_info
+  Status: FAIL
+  Business Rules:
+    - Unique Customer ID: PASS (Errors: 0)
+    - Valid Gender: PASS (Errors: 0)
+    - KYC Status Consistency: PASS (Errors: 0)
+    - Date of Birth Validity: PASS (Errors: 0)
+    - Annual Income Non-Negative: PASS (Errors: 0)
+  Test Scenarios:
+    - Create Individual Customer with Valid Data: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Create Individual Customer with Valid Data
+      Samples: []
+    - Duplicate Customer ID: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Duplicate Customer ID
+      Samples: []
+    - Invalid Gender Value: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Invalid Gender Value
+      Samples: []
+    - KYC Status and Flag Mismatch: FAIL (Matched: 0)
+      Error Message: No records matched scenario: KYC Status and Flag Mismatch
+      Samples: []
+    - Negative Annual Income: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Negative Annual Income
+      Samples: []
+    - Customer with Future Birth Date: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Customer with Future Birth Date
+      Samples: []
+
+Table: imobile_user_session
+  Status: FAIL
+  Business Rules:
+    - Unique Session ID: PASS (Errors: 0)
+    - Valid Customer Reference: PASS (Errors: 0)
+    - Session Time Consistency: PASS (Errors: 0)
+    - Valid Channel: PASS (Errors: 0)
+  Test Scenarios:
+    - Successful Mobile Login Session: PASS (Matched: 1)
+    - Session with Invalid Customer Reference: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Session with Invalid Customer Reference
+      Samples: []
+    - Session End Time Before Start Time: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Session End Time Before Start Time
+      Samples: []
+    - Invalid Channel Value: FAIL (Matched: 0)
+      Error Message: No records matched scenario: Invalid Channel Value
+      Samples: []
+    - First Login with Biometric Enabled: PASS (Matched: 648)
+
+Cross-table Relationship Validations:
+  credit_card_accounts->customer_info (customer_id): PASS (Errors: 0)
+  credit_card_transactions->credit_card_accounts (serial_number): PASS (Errors: 0)
+  credit_card_accounts->credit_card_products (product_code): PASS (Errors: 0)
+  credit_card_transactions->credit_card_products (product_code): PASS (Errors: 0)
+  imobile_user_session->customer_info (customer_id): PASS (Errors: 0)
+
+Data Quality Metrics:
+
