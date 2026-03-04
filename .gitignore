@@ -32,3 +32,6 @@ runs/
 *.temp
 coverage/
 .nyc_output/
+
+# Markdown
+*.md
