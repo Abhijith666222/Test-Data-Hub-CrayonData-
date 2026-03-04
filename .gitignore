@@ -33,5 +33,6 @@ runs/
 coverage/
 .nyc_output/
 
-# Markdown
+# Markdown (except root README)
 *.md
+!/README.md
